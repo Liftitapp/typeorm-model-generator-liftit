@@ -1,6 +1,6 @@
 {
     "name": "@liftitapp/typeorm-model-generator",
-    "version": "0.2.24",
+    "version": "0.2.25",
     "description": "Generates models for TypeORM from existing databases.",
     "bin": "bin/typeorm-model-generator",
     "scripts": {
@@ -16,14 +16,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Kononnable/typeorm-model-generator.git"
+        "url": "git+https://github.com/Liftitapp/typeorm-model-generator-liftit.git"
     },
-    "author": "Kononnable",
+    "author": "Liftitapp",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/Kononnable/typeorm-model-generator/issues"
+        "url": "https://github.com/Liftitapp/typeorm-model-generator-liftit/issues"
     },
-    "homepage": "https://github.com/Kononnable/typeorm-model-generator#readme",
+    "homepage": "https://github.com/Liftitapp/typeorm-model-generator-liftit#readme",
     "dependencies": {
         "change-case": "^3.0.2",
         "handlebars": "^4.0.11",

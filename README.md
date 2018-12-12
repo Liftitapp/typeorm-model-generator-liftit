@@ -1,9 +1,4 @@
-# typeorm-model-generator
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/Kononnable/typeorm-model-generator.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/Kononnable/typeorm-model-generator.svg?branch=master)](https://travis-ci.org/Kononnable/typeorm-model-generator)
-[![npm version](https://badge.fury.io/js/typeorm-model-generator.svg)](https://badge.fury.io/js/typeorm-model-generator)
-[![codecov](https://codecov.io/gh/Kononnable/typeorm-model-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/Kononnable/typeorm-model-generator)
+# @liftitapp/typeorm-model-generator-liftit
 
 Generates models for TypeORM from existing databases.
 Suported db engines:
@@ -17,7 +12,7 @@ Suported db engines:
 
 ## Installation
 ### Global module
-To install module globally simply type `npm i -g typeorm-model-generator` in your console.
+To install module globally simply type `npm i -g @liftitapp/typeorm-model-generator-liftit` in your console.
 ### Npx way
 Thanks to npx you can use npm modules without polluting global installs. So nothing to do here :)
 >To use `npx` you need to use npm at version at least 5.2.0. Try updating your npm by `npm i -g npm`
@@ -91,6 +86,6 @@ Options:
       npx typeorm-model-generator -d "Z:\sqlite.db" -e sqlite -o .
       ````
 ## Naming strategy
-If you want to generate custom names for properties in generated entities you need to use custom naming strategy. You need to create your own version of [NamingStrategy](https://github.com/Kononnable/typeorm-model-generator/blob/master/src/NamingStrategy.ts) and pass it as command parameter.
+If you want to generate custom names for properties in generated entities you need to use custom naming strategy. You need to create your own version of NamingStrategy and pass it as command parameter.
 
 ```typeorm-model-generator -d typeorm_mg --namingStrategy=./NamingStrategy -e sqlite -db /tmp/sqliteto.db```
