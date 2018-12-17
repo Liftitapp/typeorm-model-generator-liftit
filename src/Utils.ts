@@ -1,4 +1,5 @@
 import * as packagejson from "./../../package.json";
+
 export function LogError(
     errText: string,
     isABug: boolean = true,
@@ -19,6 +20,7 @@ export function LogError(
         console.error(errObject);
     }
 }
+
 export function packageVersion() {
     return `${(packagejson as any).name}@${(packagejson as any).version}`;
 }

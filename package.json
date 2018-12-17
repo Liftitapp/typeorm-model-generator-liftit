@@ -12,7 +12,8 @@
         "posttest": "remap-istanbul -i ./coverage/coverage.json -o ./coverage/lcov.info -t lcovonly && remap-istanbul -i ./coverage/coverage.json -o ./coverage/coverage.json && codecov --file=./coverage/coverage.json ",
         "clean": "rimraf dist coverage output",
         "prettier": "prettier --write ./src/*.ts ./src/**/*.ts",
-        "prepack": "npm run compile"
+        "prepack": "npm run compile",
+        "tslint-check": "tslint-config-prettier-check ./tslint.json"
     },
     "repository": {
         "type": "git",

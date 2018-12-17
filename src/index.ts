@@ -146,6 +146,7 @@ switch (argv.e) {
         TomgUtils.LogError("Database engine not recognized.", false);
         throw new Error("Database engine not recognized.");
 }
+
 let namingStrategy: AbstractNamingStrategy;
 if (argv.namingStrategy && argv.namingStrategy !== "") {
     // tslint:disable-next-line:no-var-requires
@@ -180,6 +181,7 @@ console.log(TomgUtils.packageVersion());
 console.log(
     `[${new Date().toLocaleTimeString()}] Starting creation of model classes.`
 );
+
 engine.createModelFromDatabase().then(() => {
     console.info(
         `[${new Date().toLocaleTimeString()}] Typeorm model classes created.`
