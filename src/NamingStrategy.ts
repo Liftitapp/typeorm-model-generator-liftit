@@ -1,4 +1,5 @@
 import { camelCase } from "change-case";
+import * as pluralize from "pluralize";
 
 import { AbstractNamingStrategy } from "./AbstractNamingStrategy";
 import { DatabaseModel } from "./models/DatabaseModel";
@@ -37,7 +38,9 @@ export class NamingStrategy extends AbstractNamingStrategy {
         if (!isNaN(parseInt(columnName[columnName.length - 1], 10))) {
             columnName = columnName.substring(0, columnName.length - 1);
         }
-        columnName += isRelationToMany ? "s" : "";
+        if (isRelationToMany) {
+            columnName = pluralize(columnName);
+        }
 
         if (
             relation.relationType !== "ManyToMany" &&
